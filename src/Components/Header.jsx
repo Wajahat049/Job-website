@@ -6,8 +6,8 @@ const Header = () => {
             <header>
                 <div className='HeaderText'>
                     <div >
-                        <h1>JOB SEARCH WEB</h1>
-                        <p>Enjoy Online Job Searching with <b>JOB SEARCH WEB</b> </p>
+                        <h1>GO JOBBER</h1>
+                        <p>Enjoy Online Job Searching with <b>GO JOBBER</b> </p>
                     </div>
                 </div>
             </header>

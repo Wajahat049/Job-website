@@ -3,6 +3,7 @@ import Header from '../Components/Header';
 import JobCard from '../Components/JobCard';
 import Footer from "../Components/Footer"
 import {Button} from "react-bootstrap"
+import {useEffect} from "react"
 
 
 function Home() {

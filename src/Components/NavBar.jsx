@@ -5,6 +5,7 @@ import { IoLogIn } from 'react-icons/io5';
 import Modal from 'react-modal';
 import styled from "styled-components";
 import { AccountBox } from "../Components/accountBox";
+import JobLogo from "../Assests/myjoblogo.png"
 
 
 
@@ -56,8 +57,10 @@ const NavBar = () => {
 
     return (
         <Navbar sticky='top' collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Container>
-                <Navbar.Brand href="#home">JOB SEARCH WEB</Navbar.Brand>
+            <Container fluid>
+                <Navbar.Brand href="#home">
+                    <img width={65} height={60} src={JobLogo} alt="" />
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto navBar">
