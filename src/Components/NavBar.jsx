@@ -11,14 +11,15 @@ import JobLogo from "../Assests/myjoblogo.png"
 
 const customStyles = {
     content: {
-        top: '50%',
+        top: '45%',
         left: '50%',
         right: 'auto',
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
         borderRadius:20,
-        marginTop:"5%"
+        marginTop:"5%",
+        padding:"8px",
     },
     overlay: {
         position: 'fixed',
