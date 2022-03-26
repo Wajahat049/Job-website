@@ -575,3 +575,63 @@ border: 2px solid blue;
   
 }
 
+
+/* About and Contact  */
+
+.descr-heading{
+  color: rgb(2, 35, 95) ;
+  text-align: center;
+  margin: 3%;
+  font-weight: bold;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.about-desc-row{
+  text-align: center;
+}
+
+.col-heading{
+  color: rgb(2, 35, 95) ;
+  font-weight: bold;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 140%;
+}
+
+.about-desc-col{
+  margin: 2%;
+}
+
+.contact_form{
+  margin: 3% 35% 3% 35%;
+  border: 2px solid #ff9902;
+  border-radius: 5%;
+
+}
+
+.form-group{
+  margin: 5% 10% 5% 10%;
+  color: #ff9902;
+  font-weight: 500;
+  width: 80%;
+}
+
+.BTN{
+  background-color:#ff9902 !important;
+  height:30% !important;
+  width: 20%;
+  margin-left: 10%;
+  margin-bottom: 3%;
+  transition-duration: 0.4s;
+}
+
+.BTN:hover{
+  background-color: #04091e !important;
+  color: white !important;
+}
+
+.contact_bg{
+  background-image: url("https://hawk-sense.com/assets/images/aboutus/contactus2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0.005% 0% 1% 0%;
+}
