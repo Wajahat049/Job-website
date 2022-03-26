@@ -37,6 +37,43 @@ const { MongoClient, ServerApiVersion } = require("mongodb");
 
 // Scrape()
 
+
+
+
+// Login
+const Login = async (req, res) => {
+  const uri =
+    "mongodb+srv://wajahat:wajju123@cluster0.0buc1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  const client = new MongoClient(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverApi: ServerApiVersion.v1,
+  });
+  let result = await client.connect();
+  let collection = result.db("GoJobber").collection("Users");
+
+  collection.findOne({ email: req.body.email }).then((user, err) => {
+    if (user) {
+      if (user.pass == req.body.pass) {
+      res.status(400).send({ message: "Successfully Login" });
+        console.log("Successfully Login")
+      }
+      else {
+        res.status(400).send({ message: "Incorrect Password" });
+        console.log("Incorrect Password")
+      }
+      return;
+    }
+    else{
+      res.status(400).send({ message: "Incorrect Email" });
+      console.log("Incorrect Email")
+      return;
+    }
+  });
+
+};
+
+
 async function getData() {
   const uri =
     "mongodb+srv://wajahat:wajju123@cluster0.0buc1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
@@ -60,6 +97,8 @@ async function getData() {
   // })
 }
 
+// Signup
+
 async function postData(user) {
   const uri =
     "mongodb+srv://wajahat:wajju123@cluster0.0buc1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
@@ -69,12 +108,9 @@ async function postData(user) {
     serverApi: ServerApiVersion.v1,
   });
   let result = await client.connect();
-  // client.connect(async err =>{
   let collection = result.db("GoJobber").collection("Users");
   collection.insertOne(user, function (err, res) {
     if (err) throw err;
-    console.log("1 document inserted");
-    // db.close();
   });
 }
 
@@ -85,9 +121,17 @@ app.get("/AllUsers", (req, res) => {
   });
 });
 
+
+// For Signup
 app.post("/CreateUser", (req, res) => {
   console.log("New User", req.body);
   postData(req.body);
+});
+
+// For Login
+app.post("/Login", (req, res) => {
+  console.log("New User", req.body);
+  Login(req, res);
 });
 
 const PORT = process.env.PORT || 8000;
