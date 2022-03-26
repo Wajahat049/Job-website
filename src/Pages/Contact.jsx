@@ -1,63 +1,37 @@
 import React from 'react';
-import '../App.css'
-import { Col, Row } from "react-bootstrap";
-import { BiSearchAlt } from 'react-icons/bi';
-import { RiWallet2Fill } from 'react-icons/ri';
-import { GiGlobe } from 'react-icons/gi';
-
-
-const About = () => {
-
-    const style = { color: "#ff9902", fontSize: "300%" }
-
+import '../App.css';
+const Contact = () => {
     return (
         <div className='Container'>
-            <header>
+            {/* <header>
                 <div className='HeaderText'>
-                    <div>
-                        <h1>ABOUT</h1>
+                    <div >
+                        <h1>CONTACT</h1>
                         <p>Find your dream jobs with our powerful <b>JOB SEARCH WEB</b> </p>
-                        </div>
+                    </div>
                 </div>
-            </header>
-            <div>
-                <h1 className='about-heading'>ABOUT US</h1>
+            </header> */}
+            <div className='contact_bg'>
+                <h1 className='about-heading'>CONTACT US</h1>
+            
+                <form className='contact_form' id="contact-form" method="POST">
+                    <div className="form-group">
+                        <label htmlFor="name">Name</label>
+                        <input type="text" className="form-control" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="exampleInputEmail1">Email address</label>
+                        <input type="email" className="form-control" aria-describedby="emailHelp" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="message">Message</label>
+                        <textarea className="form-control" rows="5"></textarea>
+                    </div>
+                    <button type="submit" className="btn BTN">Submit</button>
+                </form>
             </div>
-            <div>
-                <h3 className='descr-heading'> How Jobworld Works for You </h3>
-            </div>
-            <Row className='about-desc-row'>
-                <Col className='col-heading'>Perfect Search Tool</Col>
-                <Col className='col-heading'>Highly Paid Jobs</Col>
-                <Col className='col-heading'>5757 Companies</Col>
-            </Row>
-            <Row className='about-desc-row'>
-                <Col>
-                    <BiSearchAlt style={style} className="icons" /></Col>
-                <Col>
-                    <RiWallet2Fill style={style} className="icons" /></Col>
-                <Col>
-                    <GiGlobe style={style} className="icons" /></Col>
-            </Row>
-            <Row className='about-desc-row'>
-                <Col className='about-desc-col'> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatum corporis officia sapiente magni quo dolorem numquam,
-                    accusamus esse excepturi, asperiores necessitatibus molestias aliquam eveniet?
-                    Pariatur ducimus perferendis dolorem omnis consequuntur. </Col>
-
-                <Col className='about-desc-col'> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatum corporis officia sapiente magni quo dolorem numquam,
-                    accusamus esse excepturi, asperiores necessitatibus molestias aliquam eveniet?
-                    Pariatur ducimus perferendis dolorem omnis consequuntur. </Col>
-
-                <Col className='about-desc-col'> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatum corporis officia sapiente magni quo dolorem numquam,
-                    accusamus esse excepturi, asperiores necessitatibus molestias aliquam eveniet?
-                    Pariatur ducimus perferendis dolorem omnis consequuntur. </Col>
-            </Row>
-
         </div>
     )
 }
 
-export default About;
+export default Contact;
